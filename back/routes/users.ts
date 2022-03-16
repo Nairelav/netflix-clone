@@ -33,3 +33,5 @@ router.put("/:id", verifyToken, async (req: Request, res: Response) => {
 // -- Get All User
 
 // -- Get User Stats
+
+module.exports = router;

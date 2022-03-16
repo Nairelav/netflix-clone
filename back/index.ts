@@ -2,6 +2,7 @@ import express from "express";
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const authRoute = require("./routes/auth");
+const userRoute = require("./routes/users");
 
 dotenv.config();
 
@@ -24,6 +25,7 @@ mongoose
 app.use(express.json());
 
 app.use("/api/auth", authRoute);
+app.use("/api/user", userRoute);
 app.get("/", (req, res) => res.send("Express + TypeScript Server"));
 
 app.listen(PORT, () => {
